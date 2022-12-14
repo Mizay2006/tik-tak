@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+s=int(input('Введи количество прошедших от начала суток секунд'))
+h=(s//3600)%24
+ss=(s%60)%86400
+mm=((s-(h*3600)-ss)//60)%1440
+ss = str(ss//10) + str(ss%10)
+mm = str(mm//10) + str(mm%10)
+print(h, mm, ss,sep=':')
